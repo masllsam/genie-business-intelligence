@@ -1,213 +1,178 @@
-# 📊 Genie Master Business Plan, Unit Token Economics & SaaS Financial Model
-**Confidential — For Founder & Executive Leadership Eyes Only**  
-*Operating Jurisdiction: Vienna / Lower Austria (EU)*  
-*Platform: Genie Autonomous Intelligent Systems*
+# 🧞 Genie Sovereign Autonomous Agent Platform
+## Master Business Plan, Edge Architecture & Financial Blueprint (2026–2028)
+**Classification: Confidential — Founder & Strategic Leadership Eyes Only**  
+*Operating Jurisdiction: Vienna / Lower Austria (European Union)*  
+*Core Identity: Sovereign, Low-Bandwidth, Edge-Reachable Autonomous Intelligence Fleet*
 
 ---
 
-## 1. Executive Summary & Market Thesis
+## 1. Executive Vision & Market Thesis: The Anti-Fragile Edge
 
-The global artificial intelligence agent market is transitioning from simple prompt-response chatbot wrappers to **stateful, sovereign autonomous worker swarms**. Today's enterprises, engineering teams, and solopreneurs face three fundamental challenges with existing AI tools:
-1. **Unpredictable Token Costs**: Direct frontier LLM API bills explode without deterministic intelligent model routing.
-2. **Context Amnesia & Fragility**: Standalone agents lack persistent state, robust memory synthesis, and multi-tenant data boundaries.
-3. **Regulatory Non-Compliance**: Lack of GDPR/DSGVO data sovereignty and EU AI Act compliance in US-hosted platforms.
+The enterprise and consumer AI agent market is oversaturated with fragile, high-bandwidth browser wrappers that require continuous high-speed internet, heavyweight JavaScript clients, and surveillance-heavy big-tech accounts.
 
-**Genie solves this** by providing a sovereign, high-margin, multi-tenant AI agent operating system running on cost-effective ARM64 infrastructure with smart model tiering, delivering **76% - 92.4% gross margins** while maintaining an accessible entry price of **$9.99/mo**.
+**Genie rejects this paradigm.**
+
+Genie is engineered from the ground up as a **Sovereign Autonomous Agent Fleet** that is ultra-accessible, battery-efficient, and ubiquitous:
+- **Primary Universal Interface**: Native **Telegram Bot & Mini App** — zero-friction, instant global reach, zero app store gatekeepers, built-in micropayments via Telegram Stars and TON.
+- **Edge & LoRa Mesh Gateway (The "LoRa Phone" / Disaster-Resilient Bridge)**: Accessible via low-bandwidth protocols (LoRaWAN / Meshtastic mesh packets, SMS gateways, satcom byte-streams) allowing operators with an e-ink handheld, field radio, or basic feature phone to dispatch high-complexity autonomous workloads.
+- **HyperAgent Stateful Core**: Thread Context Documents (TCD), importance-weighted dynamic memory graph (1–5 scale), and proactive background watchers that alert over chat when real-world conditions change.
+- **NearAI Sovereign Decentralization**: User owns their agent memory keys; local privacy-first inference fallback (`llama3.2:1b` / `qwen2.5-coder:3b` air-gapped on-box); verifiable micro-settlements (Pay-By-Goal credits, crypto invoices).
+
+```
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                         GENIE GLOBAL ACCESS TOPOLOGY                             │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                  │
+│   [ 📱 Telegram Mini App ]    [ 📻 LoRa Mesh / Meshtastic ]   [ 📟 SMS / Satcom ]│
+│        (Rich Console)           (128-Byte Pocket Node)       (Air-Gap Failover)  │
+│               │                            │                          │          │
+│               └────────────────────────────┼──────────────────────────┘          │
+│                                            ▼                                     │
+│                        ┌───────────────────────────────────────┐                 │
+│                        │   GENIE EDGE INGESTION & DISPATCHER   │                 │
+│                        │  (HMAC / Secret Token / Rate Limiter) │                 │
+│                        └───────────────────┬───────────────────┘                 │
+│                                            │                                     │
+│                        ┌───────────────────┴───────────────────┐                 │
+│                        ▼                                       ▼                 │
+│        ┌───────────────────────────────┐       ┌───────────────────────────────┐ │
+│        │    HYPERAGENT STATE CORE      │       │     NEARAI SOVEREIGN FLEET    │ │
+│        │ • Thread Context Doc (TCD)    │       │ • Pay-By-Goal Settlements     │ │
+│        │ • Dynamic Memory Graph (1-5)  │       │ • Multi-Tenant RLS Boundaries │ │
+│        │ • Autonomous Watchers         │       │ • Multi-Provider Fallback Pool│ │
+│        └───────────────┬───────────────┘       └───────────────┬───────────────┘ │
+│                        │                                       │                 │
+│                        └───────────────────┬───────────────────┘                 │
+│                                            ▼                                     │
+│                        ┌───────────────────────────────────────┐                 │
+│                        │     WORKER RUNTIME & SKILLS ENGINE    │                 │
+│                        │ • /s/ Instant Responsive Web Hosting  │                 │
+│                        │ • /d/ WebCrypto Encrypted Proposals   │                 │
+│                        │ • Python Sandbox Compute & Analytics  │                 │
+│                        │ • Offline Local Ollama Air-Gap Engine │                 │
+│                        └───────────────────────────────────────┘                 │
+└──────────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 2. Subscription Packaging & Tier Structure
+## 2. Competitive Moat & Strategic Positioning
 
-Genie's pricing strategy combines predictable recurring SaaS subscriptions with tiered daily query quotas and concurrency limits to protect infrastructure while incentivizing plan upgrades:
+| Feature Vector | Big Tech Agent Wrappers | Standard Open-Source RAG | **Genie Sovereign Autonomous Fleet** |
+| :--- | :--- | :--- | :--- |
+| **Client Requirement** | Heavy Web Browser (200MB+ JS) | CLI / Python Environment | **Any Phone (Telegram / LoRa / SMS / Web)** |
+| **Bandwidth Footprint** | Continuous broadband stream | High API payload | **Ultra-low (128-byte LoRa packet or chat message)** |
+| **State Persistence** | Transient / Raw Context Dump | Vector DB Semantic Noise | **HyperAgent Thread Context Doc + Memory Graph** |
+| **Proactive Autonomy** | Passive (Prompt-Response) | Scheduled Cron Scripts | **Autonomous Watchers & Guardian Self-Heal** |
+| **Payment Rails** | Credit Card SaaS Only | Direct Token API Keys | **Pay-By-Goal, Telegram Stars, TON, Stripe, Fiat** |
+| **Data Sovereignty** | US Big Tech Cloud Storage | Local Single-User | **EU Austrian DSG + PostgreSQL RLS + WebCrypto** |
+| **Air-Gap Resilience** | 0% (Fails on outage) | Variable | **100% Local Offline Ollama Fallback Pool** |
+
+---
+
+## 3. Product Offerings & Monetization Model
+
+### 3.1 Subscription Tiers (Predictable Recurring SaaS)
 
 ```
 ┌──────────────────────────┬──────────────────────────┬──────────────────────────┐
-│       STARTER PLAN       │         PRO PLAN         │     ENTERPRISE PLAN      │
+│       STARTER PLAN       │         PRO PLAN         │     ENTERPRISE FLEET     │
 │     $9.99 / €9.20 mo     │    $29.99 / €27.60 mo    │    $99.99 / €92.00 mo    │
 ├──────────────────────────┼──────────────────────────┼──────────────────────────┤
-│ • 100 daily quota runs   │ • 500 daily quota runs   │ • 2,000 daily quota runs │
-│ • 3 concurrent agents    │ • 10 concurrent agents   │ • 50 concurrent agents   │
-│ • Fast model tiering     │ • Gemini 3.7 Flash + COT │ • Full Agent Swarms      │
-│ • Community support      │ • Webhook integrations   │ • Custom tool extensions │
-│ • Standard memory buffer │ • Extended memory state  │ • 99.9% Uptime SLA       │
+│ • 100 daily task runs    │ • 500 daily task runs    │ • 2,000 daily task runs  │
+│ • 3 concurrent Genies    │ • 10 concurrent Genies   │ • 50 concurrent Genies   │
+│ • Web & Doc Builders     │ • All 8 Worker Skills    │ • Custom Skill SDK       │
+│ • Telegram Bot access    │ • Mini App & Widget SDK  │ • LoRa Gateway Bridge    │
+│ • Community support      │ • Priority Gemini 3.7    │ • 99.9% Uptime SLA       │
 │ • Gross Margin: 93.7%    │ • Gross Margin: 91.1%    │ • Gross Margin: 76.2%    │
 └──────────────────────────┴──────────────────────────┴──────────────────────────┘
 ```
 
-### Detailed Tier Breakdown
+### 3.2 Pay-By-Goal Credit Packs (No-Commitment Micropayments)
 
-| Feature / Metric | Free Trial | Starter ($9.99/mo) | Pro ($29.99/mo) | Enterprise ($99.99/mo) |
+Targeted at solopreneurs, developers, and field operators who want on-demand autonomous compute without recurring monthly subscriptions:
+
+| Credit Pack | Goal Credits | Fiat (Stripe) | Telegram Stars | TON / Crypto | Unit Cost / Goal | Gross Margin |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Pack 10 (Sprint)** | 10 Goals | **$10.00 USD** | 500 ⭐ | 4 TON | $1.00 / goal | **97.3%** |
+| **Pack 30 (Pro)** | 30 Goals | **$25.00 USD** | 1,250 ⭐ | 10 TON | $0.83 / goal | **96.7%** |
+| **Pack 70 (Enterprise)** | 70 Goals | **$50.00 USD** | 2,500 ⭐ | 20 TON | $0.71 / goal | **96.2%** |
+
+*Note: 1 Goal Credit covers a full multi-turn ReAct agent execution (up to 8 tool steps, web publishing, document encryption, and automated email dispatch).*
+
+### 3.3 Sovereign Benefactor & Compute Donations
+
+Community-backed open compute donations seamlessly integrated on the landing page and Telegram:
+- **Espresso for the Genie**: $5.00 USD
+- **GPU Compute Fuel**: $25.00 USD
+- **Sovereign Benefactor**: $100.00 USD
+- **Custom Amount**: User-defined micro-grant.
+
+---
+
+## 4. Unit Token Economics & Variable Cost Architecture
+
+### 4.1 Cost Breakdown per Goal Execution
+
+An average Genie multi-agent task execution footprint:
+- **Planning & Enchantment Step**: ~800 tokens ($0.075/1M input &rarr; $0.000060)
+- **Tool Execution & Code Sandbox**: ~1,200 tokens ($0.075/1M input &rarr; $0.00090)
+- **Artifact Compilation (HTML/Doc/Report)**: ~450 tokens ($0.300/1M output &rarr; $0.000135)
+- **Total Upstream API Cost**: **$0.000285 (~0.0285 cents per task)**.
+
+### 4.2 Gross Margin Analysis Across Billing Modalities
+
+| Modality | Price Point | Est. Tasks Consumed | Variable Inference Cost | Blended Gross Margin |
 | :--- | :--- | :--- | :--- | :--- |
-| **Monthly Price (USD)** | $0.00 | $9.99 | $29.99 | $99.99 |
-| **Monthly Price (EUR)** | €0.00 | €9.20 | €27.60 | €92.00 |
-| **Daily Run Quota** | 20 runs/day | 100 runs/day | 500 runs/day | 2,000 runs/day |
-| **Monthly Theoretical Max** | 600 runs | 3,000 runs | 15,000 runs | 60,000 runs |
-| **Expected Avg Monthly Runs** | 180 runs | 1,200 runs | 6,600 runs | 33,000 runs |
-| **Max Concurrent Agents** | 1 | 3 | 10 | 50 |
-| **Model Gateway Tier** | Free/Local Tier | Standard Fast | Priority Gemini 3.7 Flash | Multi-Model Routing |
-| **Database Isolation** | Shared Trial | PostgreSQL RLS | Dedicated RLS Namespace | Dedicated DB Schema |
-| **SLA & Support** | Community | Standard Email | Priority (24h SLA) | Dedicated (4h MTTR SLA) |
+| **Starter Sub ($9.99/mo)** | $9.99 | ~1,200 runs/mo | $0.342 | **96.6%** |
+| **Pro Sub ($29.99/mo)** | $29.99 | ~6,600 runs/mo | $1.881 | **93.7%** |
+| **Enterprise Sub ($99.99/mo)**| $99.99 | ~33,000 runs/mo | $9.405 | **90.6%** |
+| **Pay-By-Goal (Pack 30)** | $25.00 | 30 full goals | $0.009 | **99.9%** |
 
 ---
 
-## 3. Unit Token Economics & Gross Margin Model
+## 5. The Hardware Edge: LoRa Mesh & Low-Bandwidth Gateway Specification
 
-### 3.1 Upstream LLM Cost Structure (via OpenRouter Gateway)
+### 5.1 The "LoRa Phone" Concept
+Operators in remote environments, disasters, or air-gapped zones carry a \$25 Meshtastic LoRa node (e.g. Heltec V3, LilyGO T-Beam, RAK Wireless) paired with a lightweight e-ink or basic keypad device.
 
-Genie routes agent workloads through an intelligent multi-tier gateway to minimize token expenses:
-
-| Model Tier | Primary Model | Input Cost / 1M Tokens | Output Cost / 1M Tokens | Blended Cost / 1M Tokens |
-| :--- | :--- | :--- | :--- | :--- |
-| **Tier 1 (High Performance)** | `google/gemini-3.7-flash` | **$0.075** | **$0.300** | **$0.120** |
-| **Tier 2 (Fallback / Local)** | `nvidia/nemotron-mini` / `llama-3` | **$0.000** | **$0.000** | **$0.000** |
-| **Tier 3 (Deep Reasoning)** | `deepseek/deepseek-r1` / `o3-mini` | **$0.550** | **$2.190** | **$0.878** |
-
-### 3.2 Granular Query Economics
-
-An average Genie agent task cycle consumes:
-- **Input / Prompt Tokens**: ~1,800 tokens (System prompt, conversation history, retrieved memory, tool schemas).
-- **Output / Completion Tokens**: ~450 tokens (Agent thoughts, tool invocation arguments, final response).
-- **Total Token Footprint per Run**: **2,250 tokens**.
-
-**Cost Calculation per Single Run (Tier 1 Gemini 3.7 Flash):**
-$$\text{Cost}_{\text{input}} = \frac{1,800}{1,000,000} \times \$0.075 = \$0.000135$$
-$$\text{Cost}_{\text{output}} = \frac{450}{1,000,000} \times \$0.300 = \$0.000135$$
-$$\mathbf{\text{Total Variable Inference Cost per Run} = \$0.000270 \text{ (0.027 cents)}}$$
+### 5.2 Transmission Protocol (LoRa to Cloud Dispatcher)
+1. **Operator Encodes Goal**: `G:site:fpv_clinic:vienna:49eur` (28 bytes).
+2. **LoRa Mesh Broadcast**: Transmitted over 868 MHz (EU) / 915 MHz (US) to a local Genie Edge Gateway node connected via 4G/LTE or satellite (Iridium/Starlink).
+3. **Gateway Ingestion**: Edge gateway signs the payload with HMAC-SHA256 and relays it to `/webhook/{gateway_id}` on the Genie Dispatcher (:8443).
+4. **Autonomous Execution**: Genie Squad compiles the project, generates the unguessable live URL `https://antifatypes.com/s/site_{token}/`, and logs the artifact.
+5. **Compressed Acknowledgement**: Dispatcher encodes response into 32 bytes: `OK:s/site_lbE4:book_act` and transmits it back across the mesh radio.
 
 ---
 
-### 3.3 Unit Margin Breakdown per Subscriber Tier
-
-#### A. Starter Tier ($9.99 / Month)
-- **Assumed Usage**: 40 runs/day = 1,200 runs/month
-- **Monthly Inference Cost**: $1,200 \times \$0.000270 = \mathbf{\$0.324}$
-- **Stripe Austria Fee**: $2.9\% + \$0.30 = \$0.590$
-- **Compute / Storage Allocation**: $\$0.100$
-- **Total Direct COGS**: $\mathbf{\$1.014}$
-- **Monthly Gross Profit**: $\$9.99 - \$1.014 = \mathbf{\$8.976}$
-- **Gross Profit Margin**: $\mathbf{89.8\% - 93.7\%}$ *(depending on free-tier model mix)*
-
-#### B. Pro Tier ($29.99 / Month)
-- **Assumed Usage**: 220 runs/day = 6,600 runs/month
-- **Monthly Inference Cost**: $6,600 \times \$0.000270 = \mathbf{\$1.782}$
-- **Stripe Austria Fee**: $2.9\% + \$0.30 = \$1.170$
-- **Compute / Storage Allocation**: $\$0.350$
-- **Total Direct COGS**: $\mathbf{\$3.302}$
-- **Monthly Gross Profit**: $\$29.99 - \$3.302 = \mathbf{\$26.688}$
-- **Gross Profit Margin**: $\mathbf{89.0\% - 91.1\%}$
-
-#### C. Enterprise Tier ($99.99 / Month)
-- **Assumed Usage**: 1,100 runs/day = 33,000 runs/month (Heavy agent swarms)
-- **Monthly Inference Cost (Hybrid 85% Flash, 15% Deep Reasoning)**: 
-  - Flash (28,050 runs): $28,050 \times \$0.000270 = \$7.57$
-  - Deep Reasoning (4,950 runs @ $0.0022/run): $4,950 \times \$0.00220 = \$10.89$
-  - Total Token Cost: $\$18.46$
-- **Stripe Austria Fee**: $2.9\% + \$0.30 = \$3.20$
-- **Dedicated Compute & Storage Allocation**: $\$2.15$
-- **Total Direct COGS**: $\mathbf{\$23.81}$
-- **Monthly Gross Profit**: $\$99.99 - \$23.81 = \mathbf{\$76.18}$
-- **Gross Profit Margin**: $\mathbf{76.2\%}$
-
----
-
-## 4. Customer Acquisition Strategy (Go-To-Market)
+## 6. Financial Projections (3-Year Roadmap)
 
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        CUSTOMER ACQUISITION FUNNEL                      │
-├─────────────────────────────────────────────────────────────────────────┤
-│ Top of Funnel (Awareness):                                              │
-│ • Open Source Agent Devtools & GitHub Repositories                      │
-│ • Technical Deep Dives on Hacker News, X (Twitter), Substack            │
-│ • Local DACH / Austrian Developer & Startup Communities                 │
-│                                │                                        │
-│ Middle of Funnel (Evaluation): ▼                                        │
-│ • Free Trial (20 runs/day, 1 agent) → Zero Friction Immediate Web Onboarding│
-│ • Pre-built Agent Templates (Trading, Document Analysis, Web Scraping)  │
-│                                │                                        │
-│ Bottom of Funnel (Conversion): ▼                                        │
-│ • 14-Day Free Trial Limit Prompt → 6.2% Free-to-Paid Conversion Target  │
-│ • Seamless Stripe Checkout (Credit Card, SEPA Direct Debit, Apple Pay)  │
-└─────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────┐
+│                     3-YEAR FINANCIAL PROJECTIONS                       │
+├──────────────────────┬────────────────┬────────────────┬───────────────┤
+│ Metric               │ Year 1 (2026)  │ Year 2 (2027)  │ Year 3 (2028) │
+├──────────────────────┼────────────────┼────────────────┼───────────────┤
+│ Active Subscribers   │ 1,250          │ 7,800          │ 28,500        │
+│ Pay-By-Goal Packs/mo │ 2,400          │ 14,500         │ 55,000        │
+│ Monthly MRR          │ $34,850        │ $214,500       │ $785,000      │
+│ Annual Gross Revenue │ $418,200       │ $2,574,000     │ $9,420,000    │
+│ Infrastructure Costs │ $14,400        │ $68,000        │ $210,000      │
+│ Upstream Inference   │ $18,200        │ $98,000        │ $340,000      │
+│ Net Operating Margin │ **92.2%**      │ **93.5%**      │ **94.1%**     │
+└──────────────────────┴────────────────┴────────────────┴───────────────┘
 ```
-
-### 4.1 Unit CAC & LTV Metrics
-
-- **Blended CAC Target**: **$18.50** (Organic dev content + targeted ads + community outreach).
-- **Average Customer Lifetime (Pro Plan)**:
-  - Monthly Churn Rate: $6.5\%$
-  - Average Lifetime Months = $\frac{1}{0.065} \approx 15.4 \text{ months}$
-  - **Customer Lifetime Value (LTV)**: $15.4 \times \$29.99 = \mathbf{\$461.85}$
-  - **LTV : CAC Ratio**: $\frac{\$461.85}{\$18.50} = \mathbf{24.9 : 1}$ *(Exceptional SaaS health benchmark > 3:1)*
-- **CAC Payback Period**: Under **0.62 months** (less than 19 days on Pro plan).
 
 ---
 
-## 5. Fixed Costs & Break-Even Analysis
+## 7. Legal, Regulatory & Austrian Data Protection Mandate
 
-### 5.1 Monthly Fixed Operating Expenses (OpEx)
-
-Genie leverages Oracle Cloud Infrastructure's Always Free tier for base compute, keeping baseline overhead remarkably lean:
-
-| Expense Item | Provider / Purpose | Monthly Cost (USD) | Monthly Cost (EUR) |
-| :--- | :--- | :--- | :--- |
-| **ARM64 Compute (4 OCPU / 24GB)** | Oracle Cloud (Always Free Tier) | $0.00 | €0.00 |
-| **Auxiliary Block Storage (200GB)** | Oracle Cloud Block Volumes | $8.50 | €7.80 |
-| **Domain & DNS Management** | Cloudflare / Registrar | $3.50 | €3.20 |
-| **Transactional Email / Webhooks** | Resend / Postmark | $15.00 | €13.80 |
-| **Sentry / Uptime Monitoring Probes** | Distributed Heartbeat / APM | $18.00 | €16.50 |
-| **Total Fixed Monthly Overhead** | — | **$45.00** | **€41.30** |
-
-### 5.2 Break-Even Threshold
-
-$$\text{Break-Even Subscribers (Starter @ \$9.99)} = \frac{\$45.00}{\$8.98 \text{ gross profit}} \approx \mathbf{5.0 \text{ subscribers}}$$
-$$\text{Break-Even Subscribers (Pro @ \$29.99)} = \frac{\$45.00}{\$26.69 \text{ gross profit}} \approx \mathbf{1.7 \text{ subscribers}}$$
-
-**Conclusion**: Genie reaches cash-flow break-even with **fewer than 5 paying customers**.
+- **Austrian Data Protection Act (DSG) & GDPR/DSGVO**: Zero personal data sold; encrypted workspaces at `/home/opc/ironclaw/workspaces/{tenant_id}`; WebCrypto AES-256-GCM client-side encryption.
+- **EU AI Act (Regulation EU 2024/1689) Article 50 Transparency**: Every autonomous message explicitly discloses AI-generation (`ai_disclosed: true`).
+- **Austrian E-Commerce Act (ECG) & Media Act (MedienG § 25)**: Impressum, terms, and privacy policies localized in German, English, and Spanish.
+- **Consumer Protection Act (FAGG § 18 Abs 1 Z 11)**: Digital immediate waiver protocol enforced on all subscription checkouts.
 
 ---
 
-## 6. Three-Year Financial Forecast & Scale Model
-
-```
-                    GENIE 3-YEAR REVENUE & PROFIT TRAJECTORY
-  $70,000 ───────────────────────────────────────────────────────────┐
-                                                                     │
-  $60,000 ───────────────────────────────────────────────── $53,980 ─┤ (2,000 Subs)
-                                                          (Net: $45K)│
-  $50,000 ───────────────────────────────────────────────────────────┤
-  $40,000 ───────────────────────────────────────────────────────────┤
-  $30,000 ───────────────────────────────────────────────────────────┤
-  $20,000 ───────────────────────────────────────────────────────────┤
-  $10,000 ────────────────── $13,495 ────────────────────────────────┤ (500 Subs)
-             $2,699         (Net: $11.4K)                            │
-      $0 ─── (100 Subs) ─────────────────────────────────────────────┘
-             Month 6           Month 18                     Month 36
-```
-
-### Financial Forecast Table
-
-| Metric | Phase 1: Launch (M6) | Phase 2: PMF & Growth (M18) | Phase 3: Scale (M36) |
-| :--- | :--- | :--- | :--- |
-| **Total Active Paid Subscribers** | **100** | **500** | **2,000** |
-| — Starter ($9.99/mo) | 40 users | 180 users | 650 users |
-| — Pro ($29.99/mo) | 50 users | 270 users | 1,150 users |
-| — Enterprise ($99.99/mo) | 10 users | 50 users | 200 users |
-| **Monthly Recurring Revenue (MRR)** | **$2,898.90** | **$14,894.50** | **$60,973.50** |
-| **Annual Recurring Revenue (ARR)** | **$34,786.80** | **$178,734.00** | **$731,682.00** |
-| Direct Token Inference Costs | $215.00 | $1,105.00 | $4,580.00 |
-| Payment Gateway Fees (3.2%) | $92.76 | $476.62 | $1,951.15 |
-| Server Compute & Scaling | $65.00 | $220.00 | $850.00 |
-| **Total Cost of Goods Sold (COGS)** | **$372.76** | **$1,801.62** | **$7,381.15** |
-| **Gross Profit** | **$2,526.14** | **$13,092.88** | **$53,592.35** |
-| **Blended Gross Margin %** | **87.1%** | **87.9%** | **87.9%** |
-| Operating Overhead & S&M | $350.00 | $1,500.00 | $6,000.00 |
-| **Net Monthly Cash Profit** | **$2,176.14** | **$11,592.88** | **$47,592.35** |
-| **Annual Net Profit Run-Rate** | **$26,113.68** | **$139,114.56** | **$571,108.20** |
-
----
-
-## 7. Founder Capital Efficiency & Guardrails
-
-1. **Inference Margin Defense**: If an enterprise customer approaches 80% quota utilization with high-cost reasoning models, the router automatically applies dynamic token compression and shifts repetitive sub-tasks to Tier 1 Gemini 3.7 Flash or local Nemotron.
-2. **Zero Debt / Self-Sustaining Growth**: With monthly OpEx at $45, the founder maintains infinite operational runway and absolute sovereign control over product roadmap and IP.
+*Authored by the Genie Autonomous Systems Architecture & Business Intelligence Guild.*  
+*Official Version: 3.0.0-PROD // Signed off August 2026.*
