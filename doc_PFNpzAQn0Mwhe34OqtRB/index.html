@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Strategic Business Proposal & Project Scope — Protected Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700;800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #0171a9;
+            --brand-blue-light: #38bdf8;
+            --font-mono: 'Geist Mono', monospace;
+            --font-sans: 'Geist', -apple-system, sans-serif;
+        }
+        body { font-family: var(--font-sans); background-color: #0b0c0e; color: #ececed; }
+        .mono-head { font-family: var(--font-mono); }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; }
+            .doc-card { box-shadow: none !important; border: none !important; max-width: 100% !important; padding: 0 !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased py-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+
+    <!-- Password Prompt Gate Overlay -->
+    <div id="password-gate" class="w-full max-w-md bg-[#131517] border border-[#23272b] p-8 shadow-2xl">
+        <div class="flex items-center gap-2 mb-4">
+            <span class="bg-[#0171a9] text-white px-2 py-0.5 text-[10px] font-bold font-mono">IRONCLAW</span>
+            <span class="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest">[ RESTRICTED ACCESS ]</span>
+        </div>
+        <h2 class="text-lg font-bold text-white uppercase tracking-tight font-mono mb-2">Strategic Business Proposal & Project Scope</h2>
+        <p class="text-xs text-zinc-400 font-sans mb-6">This document is protected with zero-knowledge encryption. Input the passphrase to decrypt.</p>
+        
+        <div id="error-msg" class="hidden mb-4 p-2 bg-red-950/60 border border-red-800 text-red-300 text-xs font-mono">[ ERROR: INVALID PASSPHRASE ]</div>
+        
+        <form onsubmit="decryptDocument(event)" class="space-y-4">
+            <input type="password" id="pass-input" placeholder="ENTER PASSPHRASE..." required autofocus
+                   class="w-full px-3 py-2.5 bg-[#0b0c0e] border border-[#282d33] text-white text-xs font-mono outline-none focus:border-[#0171a9]">
+            <button type="submit" class="w-full py-2.5 bg-[#0171a9] hover:bg-[#0284c7] text-white font-mono font-bold text-xs uppercase tracking-wider transition cursor-pointer">
+                [ UNLOCK DOCUMENT ]
+            </button>
+        </form>
+    </div>
+
+    <!-- Decrypted Document Container (Hidden until unlocked) -->
+    <div id="document-wrapper" class="hidden w-full max-w-4xl mx-auto">
+        <div class="mb-6 flex justify-between items-center no-print">
+            <div class="flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-zinc-400 uppercase">
+                <span class="bg-[#0171a9] text-white px-2 py-0.5 text-[10px] font-bold">IRONCLAW</span>
+                <span>DOCUMENT REPOSITORY</span>
+                <span>•</span>
+                <span class="text-[#0171a9] bg-sky-950/40 px-2 py-0.5 border border-sky-800">[PROPOSAL]</span>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="window.print()" class="bg-[#0171a9] hover:bg-[#0284c7] text-white text-xs font-mono font-semibold px-4 py-2 shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                    <span>🖨️</span> [ PRINT / SAVE PDF ]
+                </button>
+                <button onclick="navigator.clipboard.writeText(window.location.href); alert('Shareable link copied!')" class="border border-zinc-700 hover:bg-zinc-800 text-zinc-300 text-xs font-mono font-semibold px-3 py-2 transition flex items-center gap-1.5 cursor-pointer">
+                    <span>🔗</span> [ COPY LINK ]
+                </button>
+            </div>
+        </div>
+
+        <article class="doc-card bg-white text-zinc-900 border border-zinc-200 shadow-xl p-8 sm:p-14">
+            <header class="border-b border-zinc-200 pb-8 mb-8">
+                <div class="text-[11px] font-mono text-zinc-400 uppercase tracking-widest mb-2">OUTPUT DOCUMENT // AUTONOMOUS WORKSPACE</div>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight uppercase font-mono text-[#0171a9]">Strategic Business Proposal & Project Scope</h1>
+                <div class="mt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs font-mono text-zinc-500">
+                    <div>CLASS: <span class="font-medium text-zinc-800">PROPOSAL</span></div>
+                    <div>PROTECTION: <span class="text-amber-700 font-bold bg-amber-50 px-2 py-0.5 border border-amber-200">[ ENCRYPTED ]</span></div>
+                </div>
+            </header>
+
+            <div id="decrypted-content" class="prose prose-zinc max-w-none text-zinc-800 leading-relaxed text-sm sm:text-base space-y-6">
+            </div>
+
+            <footer class="border-t border-zinc-200 mt-14 pt-6 text-center text-xs font-mono text-zinc-400 no-print">
+                <p>GENERATED SECURELY BY IRONCLAW PLATFORM • CONFIDENTIAL DOCUMENT</p>
+            </footer>
+        </article>
+    </div>
+
+    <script>
+        const encryptedData = {"salt": "xAbRuvvuSy4ANjf219tAqQ==", "iv": "04ILSUwwEzEU+Pr3", "ciphertext": "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"};
+
+        async function deriveKey(passphrase, saltBytes) {
+            const enc = new TextEncoder();
+            const keyMaterial = await crypto.subtle.importKey(
+                'raw', enc.encode(passphrase), { name: 'PBKDF2' }, false, ['deriveKey']
+            );
+            return await crypto.subtle.deriveKey(
+                {
+                    name: 'PBKDF2',
+                    salt: saltBytes,
+                    iterations: 100000,
+                    hash: 'SHA-256'
+                },
+                keyMaterial,
+                { name: 'AES-GCM', length: 256 },
+                false,
+                ['decrypt']
+            );
+        }
+
+        async function decryptDocument(e) {
+            e.preventDefault();
+            const pass = document.getElementById('pass-input').value;
+            const errDiv = document.getElementById('error-msg');
+            errDiv.classList.add('hidden');
+
+            try {
+                const salt = Uint8Array.from(atob(encryptedData.salt), c => c.charCodeAt(0));
+                const iv = Uint8Array.from(atob(encryptedData.iv), c => c.charCodeAt(0));
+                const ciphertext = Uint8Array.from(atob(encryptedData.ciphertext), c => c.charCodeAt(0));
+
+                const key = await deriveKey(pass, salt);
+                const decryptedBuffer = await crypto.subtle.decrypt(
+                    { name: 'AES-GCM', iv: iv },
+                    key,
+                    ciphertext
+                );
+
+                const dec = new TextDecoder();
+                const decryptedHtml = dec.decode(decryptedBuffer);
+
+                document.getElementById('decrypted-content').innerHTML = decryptedHtml;
+                document.getElementById('password-gate').classList.add('hidden');
+                document.getElementById('document-wrapper').classList.remove('hidden');
+                document.body.classList.remove('flex', 'items-center', 'justify-center');
+                document.body.style.backgroundColor = '#fcfcfc';
+                document.body.style.color = '#18181b';
+            } catch (err) {
+                errDiv.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

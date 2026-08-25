@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Cloud AI Strategy — Protected Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700;800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #0171a9;
+            --brand-blue-light: #38bdf8;
+            --font-mono: 'Geist Mono', monospace;
+            --font-sans: 'Geist', -apple-system, sans-serif;
+        }
+        body { font-family: var(--font-sans); background-color: #0b0c0e; color: #ececed; }
+        .mono-head { font-family: var(--font-mono); }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; }
+            .doc-card { box-shadow: none !important; border: none !important; max-width: 100% !important; padding: 0 !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased py-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+
+    <!-- Password Prompt Gate Overlay -->
+    <div id="password-gate" class="w-full max-w-md bg-[#131517] border border-[#23272b] p-8 shadow-2xl">
+        <div class="flex items-center gap-2 mb-4">
+            <span class="bg-[#0171a9] text-white px-2 py-0.5 text-[10px] font-bold font-mono">IRONCLAW</span>
+            <span class="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest">[ RESTRICTED ACCESS ]</span>
+        </div>
+        <h2 class="text-lg font-bold text-white uppercase tracking-tight font-mono mb-2">Cloud AI Strategy</h2>
+        <p class="text-xs text-zinc-400 font-sans mb-6">This document is protected with zero-knowledge encryption. Input the passphrase to decrypt.</p>
+        
+        <div id="error-msg" class="hidden mb-4 p-2 bg-red-950/60 border border-red-800 text-red-300 text-xs font-mono">[ ERROR: INVALID PASSPHRASE ]</div>
+        
+        <form onsubmit="decryptDocument(event)" class="space-y-4">
+            <input type="password" id="pass-input" placeholder="ENTER PASSPHRASE..." required autofocus
+                   class="w-full px-3 py-2.5 bg-[#0b0c0e] border border-[#282d33] text-white text-xs font-mono outline-none focus:border-[#0171a9]">
+            <button type="submit" class="w-full py-2.5 bg-[#0171a9] hover:bg-[#0284c7] text-white font-mono font-bold text-xs uppercase tracking-wider transition cursor-pointer">
+                [ UNLOCK DOCUMENT ]
+            </button>
+        </form>
+    </div>
+
+    <!-- Decrypted Document Container (Hidden until unlocked) -->
+    <div id="document-wrapper" class="hidden w-full max-w-4xl mx-auto">
+        <div class="mb-6 flex justify-between items-center no-print">
+            <div class="flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-zinc-400 uppercase">
+                <span class="bg-[#0171a9] text-white px-2 py-0.5 text-[10px] font-bold">IRONCLAW</span>
+                <span>DOCUMENT REPOSITORY</span>
+                <span>•</span>
+                <span class="text-[#0171a9] bg-sky-950/40 px-2 py-0.5 border border-sky-800">[PROPOSAL]</span>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="window.print()" class="bg-[#0171a9] hover:bg-[#0284c7] text-white text-xs font-mono font-semibold px-4 py-2 shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                    <span>🖨️</span> [ PRINT / SAVE PDF ]
+                </button>
+                <button onclick="navigator.clipboard.writeText(window.location.href); alert('Shareable link copied!')" class="border border-zinc-700 hover:bg-zinc-800 text-zinc-300 text-xs font-mono font-semibold px-3 py-2 transition flex items-center gap-1.5 cursor-pointer">
+                    <span>🔗</span> [ COPY LINK ]
+                </button>
+            </div>
+        </div>
+
+        <article class="doc-card bg-white text-zinc-900 border border-zinc-200 shadow-xl p-8 sm:p-14">
+            <header class="border-b border-zinc-200 pb-8 mb-8">
+                <div class="text-[11px] font-mono text-zinc-400 uppercase tracking-widest mb-2">OUTPUT DOCUMENT // AUTONOMOUS WORKSPACE</div>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight uppercase font-mono text-[#0171a9]">Cloud AI Strategy</h1>
+                <div class="mt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs font-mono text-zinc-500">
+                    <div>CLASS: <span class="font-medium text-zinc-800">PROPOSAL</span></div>
+                    <div>PROTECTION: <span class="text-amber-700 font-bold bg-amber-50 px-2 py-0.5 border border-amber-200">[ ENCRYPTED ]</span></div>
+                </div>
+            </header>
+
+            <div id="decrypted-content" class="prose prose-zinc max-w-none text-zinc-800 leading-relaxed text-sm sm:text-base space-y-6">
+            </div>
+
+            <footer class="border-t border-zinc-200 mt-14 pt-6 text-center text-xs font-mono text-zinc-400 no-print">
+                <p>GENERATED SECURELY BY IRONCLAW PLATFORM • CONFIDENTIAL DOCUMENT</p>
+            </footer>
+        </article>
+    </div>
+
+    <script>
+        const encryptedData = {"salt": "LmavHzTdofq3L3wUAXkrFw==", "iv": "DOUM5y3BK33buCKW", "ciphertext": "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"};
+
+        async function deriveKey(passphrase, saltBytes) {
+            const enc = new TextEncoder();
+            const keyMaterial = await crypto.subtle.importKey(
+                'raw', enc.encode(passphrase), { name: 'PBKDF2' }, false, ['deriveKey']
+            );
+            return await crypto.subtle.deriveKey(
+                {
+                    name: 'PBKDF2',
+                    salt: saltBytes,
+                    iterations: 100000,
+                    hash: 'SHA-256'
+                },
+                keyMaterial,
+                { name: 'AES-GCM', length: 256 },
+                false,
+                ['decrypt']
+            );
+        }
+
+        async function decryptDocument(e) {
+            e.preventDefault();
+            const pass = document.getElementById('pass-input').value;
+            const errDiv = document.getElementById('error-msg');
+            errDiv.classList.add('hidden');
+
+            try {
+                const salt = Uint8Array.from(atob(encryptedData.salt), c => c.charCodeAt(0));
+                const iv = Uint8Array.from(atob(encryptedData.iv), c => c.charCodeAt(0));
+                const ciphertext = Uint8Array.from(atob(encryptedData.ciphertext), c => c.charCodeAt(0));
+
+                const key = await deriveKey(pass, salt);
+                const decryptedBuffer = await crypto.subtle.decrypt(
+                    { name: 'AES-GCM', iv: iv },
+                    key,
+                    ciphertext
+                );
+
+                const dec = new TextDecoder();
+                const decryptedHtml = dec.decode(decryptedBuffer);
+
+                document.getElementById('decrypted-content').innerHTML = decryptedHtml;
+                document.getElementById('password-gate').classList.add('hidden');
+                document.getElementById('document-wrapper').classList.remove('hidden');
+                document.body.classList.remove('flex', 'items-center', 'justify-center');
+                document.body.style.backgroundColor = '#fcfcfc';
+                document.body.style.color = '#18181b';
+            } catch (err) {
+                errDiv.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Executive Proposal for Alpha Corp — Protected Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700;800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #0171a9;
+            --brand-blue-light: #38bdf8;
+            --font-mono: 'Geist Mono', monospace;
+            --font-sans: 'Geist', -apple-system, sans-serif;
+        }
+        body { font-family: var(--font-sans); background-color: #0b0c0e; color: #ececed; }
+        .mono-head { font-family: var(--font-mono); }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; padding: 0 !important; }
+            .doc-card { box-shadow: none !important; border: none !important; max-width: 100% !important; padding: 0 !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased py-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+
+    <!-- Password Prompt Gate Overlay -->
+    <div id="password-gate" class="w-full max-w-md bg-[#131517] border border-[#23272b] p-8 shadow-2xl">
+        <div class="flex items-center gap-2 mb-4">
+            <span class="bg-[#0171a9] text-white px-2 py-0.5 text-[10px] font-bold font-mono">IRONCLAW</span>
+            <span class="text-xs font-mono font-bold text-zinc-400 uppercase tracking-widest">[ RESTRICTED ACCESS ]</span>
+        </div>
+        <h2 class="text-lg font-bold text-white uppercase tracking-tight font-mono mb-2">Executive Proposal for Alpha Corp</h2>
+        <p class="text-xs text-zinc-400 font-sans mb-6">This document is protected with zero-knowledge encryption. Input the passphrase to decrypt.</p>
+        
+        <div id="error-msg" class="hidden mb-4 p-2 bg-red-950/60 border border-red-800 text-red-300 text-xs font-mono">[ ERROR: INVALID PASSPHRASE ]</div>
+        
+        <form onsubmit="decryptDocument(event)" class="space-y-4">
+            <input type="password" id="pass-input" placeholder="ENTER PASSPHRASE..." required autofocus
+                   class="w-full px-3 py-2.5 bg-[#0b0c0e] border border-[#282d33] text-white text-xs font-mono outline-none focus:border-[#0171a9]">
+            <button type="submit" class="w-full py-2.5 bg-[#0171a9] hover:bg-[#0284c7] text-white font-mono font-bold text-xs uppercase tracking-wider transition cursor-pointer">
+                [ UNLOCK DOCUMENT ]
+            </button>
+        </form>
+    </div>
+
+    <!-- Decrypted Document Container (Hidden until unlocked) -->
+    <div id="document-wrapper" class="hidden w-full max-w-4xl mx-auto">
+        <div class="mb-6 flex justify-between items-center no-print">
+            <div class="flex items-center gap-2 text-xs font-mono font-semibold tracking-wider text-zinc-400 uppercase">
+                <span class="bg-[#0171a9] text-white px-2 py-0.5 text-[10px] font-bold">IRONCLAW</span>
+                <span>DOCUMENT REPOSITORY</span>
+                <span>•</span>
+                <span class="text-[#0171a9] bg-sky-950/40 px-2 py-0.5 border border-sky-800">[PROPOSAL]</span>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="window.print()" class="bg-[#0171a9] hover:bg-[#0284c7] text-white text-xs font-mono font-semibold px-4 py-2 shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                    <span>🖨️</span> [ PRINT / SAVE PDF ]
+                </button>
+                <button onclick="navigator.clipboard.writeText(window.location.href); alert('Shareable link copied!')" class="border border-zinc-700 hover:bg-zinc-800 text-zinc-300 text-xs font-mono font-semibold px-3 py-2 transition flex items-center gap-1.5 cursor-pointer">
+                    <span>🔗</span> [ COPY LINK ]
+                </button>
+            </div>
+        </div>
+
+        <article class="doc-card bg-white text-zinc-900 border border-zinc-200 shadow-xl p-8 sm:p-14">
+            <header class="border-b border-zinc-200 pb-8 mb-8">
+                <div class="text-[11px] font-mono text-zinc-400 uppercase tracking-widest mb-2">OUTPUT DOCUMENT // AUTONOMOUS WORKSPACE</div>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight uppercase font-mono text-[#0171a9]">Executive Proposal for Alpha Corp</h1>
+                <div class="mt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs font-mono text-zinc-500">
+                    <div>CLASS: <span class="font-medium text-zinc-800">PROPOSAL</span></div>
+                    <div>PROTECTION: <span class="text-amber-700 font-bold bg-amber-50 px-2 py-0.5 border border-amber-200">[ ENCRYPTED ]</span></div>
+                </div>
+            </header>
+
+            <div id="decrypted-content" class="prose prose-zinc max-w-none text-zinc-800 leading-relaxed text-sm sm:text-base space-y-6">
+            </div>
+
+            <footer class="border-t border-zinc-200 mt-14 pt-6 text-center text-xs font-mono text-zinc-400 no-print">
+                <p>GENERATED SECURELY BY IRONCLAW PLATFORM • CONFIDENTIAL DOCUMENT</p>
+            </footer>
+        </article>
+    </div>
+
+    <script>
+        const encryptedData = {"salt": "sEyw4JWY9QpexCoB4SzHBg==", "iv": "fVOOGpsH1fRwxgni", "ciphertext": "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"};
+
+        async function deriveKey(passphrase, saltBytes) {
+            const enc = new TextEncoder();
+            const keyMaterial = await crypto.subtle.importKey(
+                'raw', enc.encode(passphrase), { name: 'PBKDF2' }, false, ['deriveKey']
+            );
+            return await crypto.subtle.deriveKey(
+                {
+                    name: 'PBKDF2',
+                    salt: saltBytes,
+                    iterations: 100000,
+                    hash: 'SHA-256'
+                },
+                keyMaterial,
+                { name: 'AES-GCM', length: 256 },
+                false,
+                ['decrypt']
+            );
+        }
+
+        async function decryptDocument(e) {
+            e.preventDefault();
+            const pass = document.getElementById('pass-input').value;
+            const errDiv = document.getElementById('error-msg');
+            errDiv.classList.add('hidden');
+
+            try {
+                const salt = Uint8Array.from(atob(encryptedData.salt), c => c.charCodeAt(0));
+                const iv = Uint8Array.from(atob(encryptedData.iv), c => c.charCodeAt(0));
+                const ciphertext = Uint8Array.from(atob(encryptedData.ciphertext), c => c.charCodeAt(0));
+
+                const key = await deriveKey(pass, salt);
+                const decryptedBuffer = await crypto.subtle.decrypt(
+                    { name: 'AES-GCM', iv: iv },
+                    key,
+                    ciphertext
+                );
+
+                const dec = new TextDecoder();
+                const decryptedHtml = dec.decode(decryptedBuffer);
+
+                document.getElementById('decrypted-content').innerHTML = decryptedHtml;
+                document.getElementById('password-gate').classList.add('hidden');
+                document.getElementById('document-wrapper').classList.remove('hidden');
+                document.body.classList.remove('flex', 'items-center', 'justify-center');
+                document.body.style.backgroundColor = '#fcfcfc';
+                document.body.style.color = '#18181b';
+            } catch (err) {
+                errDiv.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
